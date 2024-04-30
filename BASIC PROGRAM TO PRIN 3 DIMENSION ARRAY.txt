@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define alpha 3
+#define bita 3
+#define gyma 3
+int main() 
+{
+    int array[alpha][bita][gyma];
+    int value = 1;
+    for (int i=0; i<alpha; ++i) 
+    {
+        for (int j=0; j<bita; ++j) 
+        {
+            for (int k=0; k<gyma; ++k) 
+            {
+                array[i][j][k] = value++;
+            }
+        }
+    }
+    printf("The 3-dimensional array:\n");
+    for (int i=0;i<alpha;i++) 
+    {
+        for (int j=0;j<bita;j++) 
+        {
+            for (int k=0;k<gyma;k++) 
+            {
+                printf("%3d ",array[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+    return 0;
+}
